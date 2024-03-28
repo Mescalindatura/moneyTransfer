@@ -1,4 +1,4 @@
-package com.stb.money_transfer_app.entities;
+package com.stb.money_transfer_app.model;
 
 import jakarta.persistence.*;
 
@@ -11,7 +11,7 @@ public class Account {
     long userID;
     @ManyToOne
     @JoinColumn(name="userID", nullable=false)
-    User user;
+    Recipient user;
     double balance;
     boolean isActive;
 }

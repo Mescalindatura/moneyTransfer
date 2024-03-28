@@ -1,4 +1,4 @@
-package com.stb.money_transfer_app.entities;
+package com.stb.money_transfer_app.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

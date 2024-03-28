@@ -1,7 +1,7 @@
 package com.stb.money_transfer_app.controllers;
 
 import com.stb.money_transfer_app.dto.TransferData;
-import com.stb.money_transfer_app.service.MoneyTransferImpl;
+import com.stb.money_transfer_app.service.MoneyTransfer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 
 public class MoneyTransferCtrl {
-    final MoneyTransferImpl service;
+    final MoneyTransfer service;
 
     @GetMapping("/balance/{id}")
     public double getBalance(@PathVariable long id){
