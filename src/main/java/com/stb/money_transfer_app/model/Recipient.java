@@ -19,9 +19,6 @@ public class Recipient {
     private String name;
     private String email;
     private String residency;
-    @OneToMany(mappedBy = "user")
-    private List<Account> accounts;
-    //in real life we should create at least one account for data consistency, but as this app exists for demonstration purposes only i will put the balance to the user entity
     private double balance;
 
     public void setBalance(double operation) {

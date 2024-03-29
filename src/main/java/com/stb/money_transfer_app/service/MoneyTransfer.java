@@ -57,7 +57,7 @@ public class MoneyTransfer implements IMoneyTransfer {
         else if (recipient.getBalance() < amount)
             throw new NotEnoughMoneyException("User's balance is lower than operation amount");
         else {
-            recipient.setBalance(amount);
+            recipient.setBalance(-amount);
             recipients.save(recipient);
         }
         return recipient.getBalance();
