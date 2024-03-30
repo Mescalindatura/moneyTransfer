@@ -1,4 +1,3 @@
-README.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -6,6 +5,8 @@ target/
 
 .env
 /money_transfer_app_jar
+/out
+/target
 
 ### STS ###
 .apt_generated

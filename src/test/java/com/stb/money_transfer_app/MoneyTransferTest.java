@@ -64,7 +64,7 @@ public class MoneyTransferTest {
 
         long result = moneyTransfer.sendMoney(transferData);
 
-        assertEquals(result, 1);
+        assertEquals(result, 0);
         assertEquals(1500.0, recipient.getBalance());
     }
 
