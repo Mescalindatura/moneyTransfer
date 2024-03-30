@@ -30,7 +30,7 @@ public class MoneyTransfer implements IMoneyTransfer {
 
     @Override
     @Transactional
-    public boolean sendMoney(TransferData data) {
+    public long sendMoney(TransferData data) {
         long senderID = data.senderID(), recipientID = data.recipientID();
         double amount = data.amount();
         if (amount > 1000)
@@ -48,7 +48,7 @@ public class MoneyTransfer implements IMoneyTransfer {
         senders.save(sender);
         recipients.save(recipient);
         operations.save(o); //updates operations status after successfull transfer
-        return true;
+        return o.getOperationID();
     }
 
     @Override

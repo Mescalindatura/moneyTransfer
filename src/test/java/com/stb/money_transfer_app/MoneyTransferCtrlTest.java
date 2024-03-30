@@ -47,7 +47,7 @@ public class MoneyTransferCtrlTest {
     @Test
     void testSendMoney() throws Exception {
         TransferData transferData = new TransferData(1L, 2L, 500.0);
-        when(moneyTransferService.sendMoney(any())).thenReturn(true);
+        when(moneyTransferService.sendMoney(any())).thenReturn(1L);
 
         mockMvc.perform(post("/send")
                         .contentType(MediaType.APPLICATION_JSON)

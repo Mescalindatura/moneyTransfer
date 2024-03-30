@@ -7,7 +7,7 @@ public interface IMoneyTransfer {
 
     public double getBalance(long userID);
 
-    public boolean sendMoney(TransferData data);
+    public long sendMoney(TransferData data);
 
     public double withdraw(long userID, double amount);
 }

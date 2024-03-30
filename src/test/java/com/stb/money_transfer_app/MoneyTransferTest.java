@@ -62,9 +62,9 @@ public class MoneyTransferTest {
         when(sendersRepo.findById(transferData.senderID())).thenReturn(Optional.of(sender));
         when(recipientsRepo.findById(transferData.recipientID())).thenReturn(Optional.of(recipient));
 
-        boolean result = moneyTransfer.sendMoney(transferData);
+        long result = moneyTransfer.sendMoney(transferData);
 
-        assertTrue(result);
+        assertEquals(result, 1);
         assertEquals(1500.0, recipient.getBalance());
     }
 

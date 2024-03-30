@@ -17,7 +17,7 @@ public class MoneyTransferCtrl {
     }
 
     @PostMapping("/send")
-    public boolean sendMoney(@RequestBody TransferData data){
+    public long sendMoney(@RequestBody TransferData data){
         return service.sendMoney(data);
     }
 
